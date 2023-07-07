@@ -15,3 +15,9 @@ To use the OpenAI API, you need an API key. You can get one for free by signing 
 ```bash
 https://platform.openai.com/account/api-keys
 ```
+Need for Auth
+```bash
+import openai
+openai.api_key = 'OPENAI_API_KEY'
+``` 
+
