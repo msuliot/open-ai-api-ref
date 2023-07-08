@@ -1,4 +1,4 @@
-# Open API Reference 
+# OpenAI API Reference 
 
 This repository contains OpenAI API reference examples. 
 * [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
