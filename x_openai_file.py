@@ -2,9 +2,6 @@ import openai
 import webbrowser
 openai.api_key = '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'
 
-def open_image(url):
-    webbrowser.open(url)
-
 #####################################################
 
 # 1 ##### Get model list
@@ -26,6 +23,8 @@ def open_image(url):
 #     {"role": "user", "content": "What caused World War I?"},
 #     {"role": "assistant", "content": "World War I was caused by a combination of factors, including nationalism, imperialism, militarism, and the assassination of Archduke Franz Ferdinand of Austria."},
 #     {"role": "user", "content": "who won?"},
+#     {"role": "assistant", "content": "The Allied Powers, which included countries such as France, Britain, Russia, and later the United States, emerged as the victors of World War I. The Central Powers, consisting of Germany, Austria-Hungary, the Ottoman Empire, and Bulgaria, were defeated. The war officially ended with the signing of the Treaty of Versailles in 1919"},
+#     {"role": "user", "content": "What was the Treaty of Versailles?"},
 #   ]
 # )
 # # print(completion) # prints the whole response in JSON format
@@ -62,14 +61,14 @@ def open_image(url):
 #####################################################
 
 # 5 ##### Create image variation
-variation = openai.Image.create_variation(
-  image=open("images/michael.png", "rb"),
-  n=1,
-  size="1024x1024",
-  user="MichaelAI", # name of the user
-)
-image_url_5 = variation['data'][0]['url']
-open_image(image_url_5)
+# variation = openai.Image.create_variation(
+#   image=open("images/michael.png", "rb"),
+#   n=1,
+#   size="1024x1024",
+#   user="MichaelAI", # name of the user
+# )
+# image_url_5 = variation['data'][0]['url']
+# open_image(image_url_5)
 
 #####################################################
 
@@ -142,9 +141,6 @@ open_image(image_url_5)
 
 # print(openai.FineTune.cancel(id="ft-p0Ke7O3SifsRTm4TJPPURmbi"))
 # print(openai.Model.delete("curie"))
-
-
-
 
 #####################################################
 
