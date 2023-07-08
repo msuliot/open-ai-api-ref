@@ -1,5 +1,8 @@
 # Open API Reference 
 
+This repository contains OpenAI API reference examples. 
+https://platform.openai.com/docs/api-reference
+
 To install the official Python bindings, run the following command:
 ```bash
 pip install openai
