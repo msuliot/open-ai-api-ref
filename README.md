@@ -34,7 +34,7 @@ python3 openai_model_list.py
 Given a list of messages comprising a conversation, the model will return a response.
 
 ```bash
-python3 openai_chat_completion.py
+python3 openai_chat_completion_create.py
 ```
 
 # Create Image
