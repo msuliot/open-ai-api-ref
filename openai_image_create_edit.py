@@ -18,3 +18,4 @@ editImage = openai.Image.create_edit(
 )
 image_url_4 = editImage['data'][0]['url']
 open_image(image_url_4)
+
