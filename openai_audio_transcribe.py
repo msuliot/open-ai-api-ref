@@ -1,6 +1,6 @@
 import openai
-import _open_api_key
-openai.api_key = _open_api_key.get_api_key()
+import open_api_key
+openai.api_key = open_api_key.get_api_key()
 
 #####################################################
 
