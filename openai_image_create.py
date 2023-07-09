@@ -10,10 +10,9 @@ def open_image(url):
 
 #  ##### Create a simple image # required parameters: prompt
 createImage = openai.Image.create(
-            prompt="abstract painting of a space nebula and a laptop",
-            n=2, # The number of images to generate
+            prompt="abstract art of earth from space",
+            n=1, # The number of images to generate
             size="1024x1024",
-            user="MichaelAI", # name of the user
             response_format="url" # url is default but can also be 'b64_json'
         )
 

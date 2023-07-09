@@ -11,9 +11,8 @@ def open_image(url):
 #  ##### Create image variation
 variation = openai.Image.create_variation(
     image=open("images/michael.png", "rb"),
-    n=2, # The number of images to generate
+    n=1, # The number of images to generate
     size="1024x1024",
-    user="MichaelAI", # name of the user
     response_format="url" # url is default but can also be 'b64_json'
 )
 
