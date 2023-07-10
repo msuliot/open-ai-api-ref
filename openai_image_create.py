@@ -5,6 +5,12 @@ import webbrowser
 
 #####################################################
 
+# The Images API provides three methods for interacting with images:
+
+# 1 Creating images from scratch based on a text prompt
+# 2 Creating edits of an existing image based on a new text prompt
+# 3 Creating variations of an existing image
+
 def open_image(url):
     webbrowser.open(url)
 

@@ -9,6 +9,9 @@ def open_image(url):
     webbrowser.open(url)
 
 #  ##### Edit a image by adding something to the transparency layer
+# The uploaded image and mask must both be square PNG images less than 4MB in size, 
+# and also must have the exact same dimensions as each other. 
+
 try:
     editImage = openai.Image.create_edit(
     image=open("images/michael.png", "rb"), # Original image = exact size as the Mask image
@@ -45,3 +48,9 @@ else:
     # code to execute if no exception was raised
     for item in editImage["data"]:
       open_image(item["url"])
+
+
+##### if you want to resize an image to match the size of the mask image or the original image
+# image = Image.open("image.png")
+# width, height = 256, 256
+# image = image.resize((width, height))      
