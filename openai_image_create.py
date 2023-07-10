@@ -5,22 +5,15 @@ import webbrowser
 
 #####################################################
 
-# The Images API provides three methods for interacting with images:
-
-# 1 Creating images from scratch based on a text prompt
-# 2 Creating edits of an existing image based on a new text prompt
-# 3 Creating variations of an existing image
-
 def open_image(url):
     webbrowser.open(url)
 
 #  ##### Create a simple image # required parameters: prompt
 try:
     createImage = openai.Image.create(
-    prompt="abstract art of earth from space",
+    prompt="a painting of a forest",
     n=1, # The number of images to generate
     size="1024x1024",
-    response_format="url" # url is default but can also be 'b64_json'
 )
 except openai.error.APIError as e:
     #Handle API error here, e.g. retry or log

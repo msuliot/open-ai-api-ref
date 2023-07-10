@@ -94,6 +94,17 @@ def create_prompt(transcript):
         """
     return prompt   
 
+def create_prompt_for_video(transcript):
+    prompt = f"""
+        You are a youtube video creator. 
+        Your task is to generate a summary of the video transcript for youtube.
+
+        Summarize the video transcript, delimited by triple 
+        backticks. 
+
+        Transcript: ```{transcript}```
+        """
+    return prompt  
 
 def create_image(type, prompt, count=1, image_file_name="", image_file_mask=""):
     try:

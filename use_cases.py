@@ -15,6 +15,10 @@ import Helper
 # response = Helper.get_completion(Helper.create_prompt(transcript))
 # print(response)
 
+# REAL WORLD EXAMPLE
+# transcript = Helper.audio_to_text("audio/audio_of_video_2.m4a")
+# response = Helper.get_completion(Helper.create_prompt_for_video(transcript))
+# print(response)
 
 #####################################################
 

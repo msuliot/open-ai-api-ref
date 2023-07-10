@@ -16,7 +16,7 @@ try:
     editImage = openai.Image.create_edit(
     image=open("images/michael.png", "rb"), # Original image = exact size as the Mask image
     mask=open("images/transparency.png", "rb"), # Modified image with Mask = exact same size as the original image
-    prompt="And some mountains along the horizon, and then the sky is a nebula",
+    prompt="add mountains to the background and a nebula in the sky",
     n=1, # The number of images to generate
     size="1024x1024",
 )
