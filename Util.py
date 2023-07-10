@@ -77,12 +77,15 @@ def create_prompt(transcript):
         Your task is to generate a short summary of a conversation between a customer service agent, and a customer.
         You need to also give the sentiment of the customer at the end of the conversation.
 
-        Conversation Summary:
-        Sentiment:
-
-        Summarize the conversation below, delimited by triple 
+        Summarize the conversation, delimited by triple 
         backticks, in at most 10 words. 
 
         Conversation: ```{transcript}```
+
+        Respond in the format
+        
+        Conversation Summary:
+        Sentiment:
+
         """
     return prompt   
