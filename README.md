@@ -13,58 +13,55 @@ To install the official Node.js library, run the following command in your Node.
 npm install openai
 ```
 
-# API Keys and Auth
-
-To use the OpenAI API, you need an API key. You can get one for free by signing up for an OpenAI account.
+# Video Playlist Summary:
 ```bash
-https://platform.openai.com/account/api-keys
-```
-* Update the API key in the _open_api_key.py file.
-
-# Models
-
-List and describe the various models available in the API.
-
-```bash
-python3 openai_model_list.py
+https://www.youtube.com/playlist?list=PLFsWsxnqJRuxJEFEPh0_yXeBrxAGkq0ul
 ```
 
-# Create chat completion
+1. **Intro and Overview of OpenAI API**
+   - Brief on OpenAI API reference guide
+   - Navigation through GitHub repository for different topics like chat completions, images, audio files, fine-tuning
+   - Repository usage: Forking, cloning, or downloading the repository using Visual Studio Code
 
-Given a list of messages comprising a conversation, the model will return a response.
+2. **Getting Started with OpenAI API**
+   - Explanation of necessary pip installs for Python
+   - Obtaining API keys from OpenAI website
+   - Inserting the API key into the code
+   ```bash
+    https://platform.openai.com/account/api-keys
+    ```
 
+3. **Working with OpenAI Models**
+   - How to retrieve a list of available models (GPT-3.5 Turbos, Fours, and DaVinci)
+   - Explanation of model permissions, importance in translation and using features like Whisper
+
+4. **Chat Completion with OpenAI Models**
+   - Explanation and demonstration of chat completion
+   - Key concepts: Model selection, temperature control, number of chat completions, user roles
+   - Live demonstration of a conversation with OpenAI
+   ```bash
+    python3 openai_chat_completion_create.py
+    ```
+
+5. **Image Manipulation with OpenAI API**
+   - Review of GitHub codes for image creation, editing, and variation
+   - Demonstration of image creation with textual prompts
+   - Introduction and demonstration of image editing and variation
+   - Emphasis on checking OpenAI's status due to occasional downtime
+   ```bash
+    python3 openai_image_create.py
+    ```
+
+6. **Audio Transcription with OpenAI's Whisper Model**
+   - Overview of accessing and using audio transcriptions
+   - Demonstration of transcription process using an iPhone audio file with the Whisper 1 model
+   - Explanation of how to print and save transcription outputs
+   - Introduction to the upcoming topic: Analyzing customer service call recordings to evaluate communication quality
+   ```bash
+    python3 openai_audio_transcribe.py
+    ```
+
+This comprehensive playlist aims to provide viewers with an understanding of various aspects of the OpenAI API, from getting started to utilizing models for chat completion, image manipulation, and audio transcription. The playlist will continue with exciting topics like customer service call analysis.
 ```bash
-python3 openai_chat_completion_create.py
-```
-
-# Create Image
-
-Given a prompt and/or an input image, the model will generate a new image.
-
-```bash
-python3 openai_image_create.py
-```
-
-# Create Image Edit
-
-Creates an edited or extended image given an original image and a prompt.
-
-```bash
-python3 openai_image_create_edit.py
-```
-
-# Create Image Variation
-
-Creates a variation of a given image.
-
-```bash
-python3 openai_image_create_variation.py
-```
-
-# Create Audio
-
-Turn audio into text
-
-```bash
-python3 openai_audio_transcribe.py
+https://www.youtube.com/playlist?list=PLFsWsxnqJRuxJEFEPh0_yXeBrxAGkq0ul
 ```
