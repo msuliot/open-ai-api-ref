@@ -78,6 +78,7 @@ def audio_to_text(audio_file):
 
 def create_prompt(transcript):
     prompt = f"""
+        You are a customer service agent.
         Your task is to generate a short summary of a conversation between a customer service agent, and a customer.
         You need to also give the sentiment of the customer at the end of the conversation.
 
