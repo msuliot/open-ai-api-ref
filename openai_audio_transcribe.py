@@ -6,7 +6,7 @@ openai.api_key = open_api_key.get_api_key()
 
 #  ##### Speech to text # audio file currently limited to 25 MB
 try:
-    audio_file= open("audio/audio_of_video_2.m4a", "rb")
+    audio_file= open("audio/ChatGPTUnderstandingPrompts.m4a", "rb")
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
 except openai.error.APIError as e:
     #Handle API error here, e.g. retry or log

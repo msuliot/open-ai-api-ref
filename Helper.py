@@ -4,9 +4,10 @@ import webbrowser
 def open_image(url):
     webbrowser.open(url)
 
-def get_completion(prompt, model="gpt-3.5-turbo",temperature=0): 
+def get_chat_completion(prompt, model="gpt-3.5-turbo",temperature=0): 
     try:
-        messages = [{"role": "user", "content": prompt}]
+        messages = [{"role": "system", "content": "You are a helpful assistant, If you don't know something, just say 'I don't know'"},
+            {"role": "user", "content": prompt}] 
         response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
@@ -82,15 +83,14 @@ def create_prompt(transcript):
         Your task is to generate a short summary of a conversation between a customer service agent, and a customer.
         You need to also give the sentiment of the customer at the end of the conversation.
 
-        Summarize the conversation, delimited by triple 
-        backticks, in at most 10 words. 
+        Summarize the conversation, delimited by triple backticks, in at most 10 words. 
 
         Conversation: ```{transcript}```
 
-        Respond in the format
+        Respond in json format, with the following keys:
         
-        Conversation Summary:
-        Sentiment:
+        summary:
+        sentiment:
 
         """
     return prompt   
@@ -100,8 +100,7 @@ def create_prompt_for_video(transcript):
         You are a youtube video creator. 
         Your task is to generate a summary of the video transcript for youtube.
 
-        Summarize the video transcript, delimited by triple 
-        backticks. 
+        Summarize the video transcript, delimited by triple backticks. 
 
         Transcript: ```{transcript}```
         """

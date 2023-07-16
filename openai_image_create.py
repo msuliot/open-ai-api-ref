@@ -11,7 +11,7 @@ def open_image(url):
 #  ##### Create a simple image # required parameters: prompt
 try:
     createImage = openai.Image.create(
-    prompt="a painting of a forest",
+    prompt="an abstract painting of a sentiment of Frustration",
     n=1, # The number of images to generate
     size="1024x1024",
 )

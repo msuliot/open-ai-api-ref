@@ -2,36 +2,45 @@ import openai
 import open_api_key
 openai.api_key = open_api_key.get_api_key()
 import Helper
-
+import json
 #####################################################
 
-# 1
+baseSentimentPrompt = "create an abstract painting expressing the sentiment of "
+baseSummaryPrompt = "create a oil painting showing the "
+
+# # 1
 # transcript = Helper.audio_to_text("audio/happy.m4a") # convert audio to text
-# response = Helper.get_completion(Helper.create_prompt(transcript)) # create prompt with text and instructions on how to respond
-# print(response)
+# response = Helper.get_chat_completion(Helper.create_prompt(transcript)) # create prompt with text and instructions on how to respond
+# data = json.loads(response)
+# sentiment = data["sentiment"]
+# Helper.create_image("create",baseSentimentPrompt + sentiment) # create image from response
 
-# 2
+
+# # 2
 # transcript = Helper.audio_to_text("audio/mad.m4a")
-# response = Helper.get_completion(Helper.create_prompt(transcript))
+# response = Helper.get_chat_completion(Helper.create_prompt(transcript))
+# data = json.loads(response)
+# summary = data["summary"]
+# Helper.create_image("create",baseSummaryPrompt + summary) # create image from response
+
+
+# 3 - Youtube video to text
+transcript = Helper.audio_to_text("audio/audio_of_video.m4a")
+response = Helper.get_chat_completion(Helper.create_prompt_for_video(transcript))
+print(response)
+
+
+# 4 
+# response = Helper.get_chat_completion("was there a housing crash around 2006 and what caused it?","gpt-4",0)
 # print(response)
 
-# REAL WORLD EXAMPLE
-# transcript = Helper.audio_to_text("audio/audio_of_video.m4a")
-# response = Helper.get_completion(Helper.create_prompt_for_video(transcript))
+
+# 5 
+# your_name = "Michael"
+# response = Helper.get_chat_completion("Create a short story about a human named, " + your_name + ", trying to teach people the benefits of artificial intelligence","gpt-3.5-turbo",1.1)
 # print(response)
 
-#####################################################
 
-# 3
-# Helper.create_image("create","create a picture of a dog")
 
-# 4
-# Helper.create_image("edit",
-#                     "And some mountains along the horizon, and then the sky is a nebula",
-#                     1,
-#                     "images/michael.png",
-#                     "images/transparency.png"
-#                     )
 
-# 5
-# Helper.create_image("variation","",1,"images/michael.png")
+
