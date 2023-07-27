@@ -3,6 +3,10 @@
 This repository contains OpenAI API reference examples. 
 * [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
 
+Create a ".env" file and put your OpenAI key in that file
+```bash
+OPENAI_API_KEY='your key here'
+```
 
 To install the official Python bindings, run the following command:
 ```bash
@@ -23,10 +27,8 @@ https://www.youtube.com/playlist?list=PLFsWsxnqJRuxJEFEPh0_yXeBrxAGkq0ul
 2. **Getting Started with OpenAI API**
    - Explanation of necessary pip installs for Python
    - Obtaining API keys from OpenAI website
-   - Inserting the API key into the code
-   ```bash
-    https://platform.openai.com/account/api-keys
-    ```
+   - Inserting the API key into the code 
+   - NEW: Using dotenv to hide API keys
 
 3. **Working with OpenAI Models**
    - How to retrieve a list of available models (GPT-3.5 Turbos, Fours, and DaVinci)
