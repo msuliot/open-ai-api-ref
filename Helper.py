@@ -4,7 +4,7 @@ import webbrowser
 def open_image(url):
     webbrowser.open(url)
 
-def get_chat_completion(prompt, model="gpt-3.5-turbo",temperature=0): 
+def get_chat_completion(prompt, model="gpt-3.5-turbo",temperature=0.0): 
     try:
         messages = [{"role": "system", "content": "You are a helpful assistant, If you don't know something, just say 'I don't know'"},
             {"role": "user", "content": prompt}] 
@@ -97,10 +97,11 @@ def create_prompt(transcript):
 
 def create_prompt_for_video(transcript):
     prompt = f"""
-        You are a youtube video creator. 
+        You are an expert at creative summaries of videos.
         Your task is to generate a summary of the video transcript for youtube.
 
-        Summarize the video transcript, delimited by triple backticks. 
+        Summarize the video transcript in 1000 words and use AI As much as it makes sense, 
+        Transcript enclosed in triple backticks. 
 
         Transcript: ```{transcript}```
         """

@@ -6,11 +6,8 @@ This repository contains OpenAI API reference examples.
 
 To install the official Python bindings, run the following command:
 ```bash
-pip install openai
-```
-To install the official Node.js library, run the following command in your Node.js project directory:
-```bash
-npm install openai
+pip3 install openai
+pip3 install python-dotenv
 ```
 
 # Video Playlist Summary:

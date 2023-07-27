@@ -1,12 +1,16 @@
-import openai
-import open_api_key
-openai.api_key = open_api_key.get_api_key()
 import Helper
 import json
+import openai
+
+# get keys from .env file
+import os
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
 #####################################################
 
-baseSentimentPrompt = "create an abstract painting expressing the sentiment of "
-baseSummaryPrompt = "create a oil painting showing the "
+# baseSentimentPrompt = "create an abstract painting expressing the sentiment of "
+# baseSummaryPrompt = "create a oil painting showing the "
 
 # # 1
 # transcript = Helper.audio_to_text("audio/happy.m4a") # convert audio to text
@@ -25,7 +29,8 @@ baseSummaryPrompt = "create a oil painting showing the "
 
 
 # 3 - Youtube video to text
-transcript = Helper.audio_to_text("audio/audio_of_video.m4a")
+transcript = Helper.audio_to_text("audio/bard.m4a")
+print(transcript)
 response = Helper.get_chat_completion(Helper.create_prompt_for_video(transcript))
 print(response)
 
