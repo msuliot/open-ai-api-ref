@@ -8,10 +8,9 @@ Create a ".env" file and put your OpenAI key in that file
 OPENAI_API_KEY='your key here'
 ```
 
-To install the official Python bindings, run the following command:
+To install the Python bindings, run the following command:
 ```bash
-pip3 install openai
-pip3 install python-dotenv
+pip3 install -r requirements.txt
 ```
 
 # Video Playlist Summary:
